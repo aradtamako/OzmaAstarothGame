@@ -74,8 +74,8 @@ const shuffle = ([...array]) => {
 
 function initializeRoutes () {
   const routePatterns = [
-    [{ in: 0, out: 1 },{ in: 1, out: 2 },{ in: 2, out: 0 }],
-    [{ in: 1, out: 0 },{ in: 2, out: 1 },{ in: 0, out: 2 }]
+    [{ in: 0, out: 1 }, { in: 1, out: 2 }, { in: 2, out: 0 }],
+    [{ in: 1, out: 0 }, { in: 2, out: 1 }, { in: 0, out: 2 }]
   ]
   routes = shuffle(routePatterns[Math.floor(Math.random() * routePatterns.length)])
   const lastIn = Math.floor(Math.random() * 2)
