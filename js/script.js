@@ -51,14 +51,14 @@ const config = {
 const game = new Phaser.Game(config)
 
 function preload () {
-  this.load.image('map', '/img/map.png')
+  this.load.image('map', 'img/map.png')
 
   for (let i = 0; i < PortalFrameCount; i++) {
-    this.load.image(`portal${i}`, `/img/portal/${i}.png`)
+    this.load.image(`portal${i}`, `img/portal/${i}.png`)
   }
 
   for (let i = 0; i < AstarothFrameCount; i++) {
-    this.load.image(`astaroth${i}`, `/img/astaroth/${i}.png`)
+    this.load.image(`astaroth${i}`, `img/astaroth/${i}.png`)
   }
 
   this.load.plugin('rexgrayscalepipelineplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexgrayscalepipelineplugin.min.js', true)
