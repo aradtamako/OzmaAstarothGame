@@ -185,7 +185,7 @@ function onStartButtonClicked (_this, astarothMoveSpeed, astarothPauseDelay) {
 }
 
 function create () {
-  this.map = this.add.image(700 / 2, 350 / 2, 'map')
+  this.map = this.add.image(Width / 2, Height / 2, 'map')
 
   const portalFrames = Array.from(Array(PortalFrameCount - 1).keys()).map(x => { return { key: `portal${x}` } })
   this.anims.create({
