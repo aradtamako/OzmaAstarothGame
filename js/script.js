@@ -74,13 +74,13 @@ const shuffle = ([...array]) => {
 
 function initializeRoutes () {
   const routePatterns = [
-    [{ in: 0, out: 1 }, { in: 1, out: 2 }, { in: 2, out: 0 }],
-    [{ in: 1, out: 0 }, { in: 2, out: 1 }, { in: 0, out: 2 }]
+    [{ in: 0, out: 1, answer: 2 }, { in: 1, out: 2, answer: 0 }, { in: 2, out: 0, answer: 1 }],
+    [{ in: 1, out: 0, answer: 2, }, { in: 2, out: 1, answer: 0 }, { in: 0, out: 2, answer: 1 }]
   ]
   routes = shuffle(routePatterns[Math.floor(Math.random() * routePatterns.length)])
   const lastIn = Math.floor(Math.random() * 2)
   lastRoute = { in: lastIn, out: null }
-  answer = routes.find(x => x['in'] === lastIn)['out']
+  answer = routes.find(x => x['in'] === lastIn)['answer']
 }
 
 function spawnAstaroth (_this, x = 350, y = 250) {
